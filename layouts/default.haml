@@ -1,0 +1,23 @@
+!!! Strict
+%html
+  %head
+    %title A Brand new template - #{@item[:title]}
+    %link{:href => "/css/main.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    #main
+      = yield
+    #sidebar
+      %h2 Documentation
+      %ul
+        %li
+          %a{:href => "http://nanoc.stoneship.org/tutorial/"} Tutorial
+        %li
+          %a{:href => "http://nanoc.stoneship.org/manual/"} Manual
+      %h2 Community
+      %ul
+        %li
+          %a{:href => "http://groups.google.com/group/nanoc/"} Discussion Group
+        %li
+          %a{:href => "http://groups.google.com/group/nanoc-es/"} Spanish Discussion Group
+        %li
+          %a{:href => "http://projects.stoneship.org/trac/nanoc/"} Wiki

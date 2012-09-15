@@ -1,35 +1,28 @@
 #!/usr/bin/env ruby
 
-require 'compass'
+#require 'compass'
 
-Compass.add_project_configuration('config.rb')
+#Compass.add_project_configuration 'config.rb'
 
 ### Compilation rules
 
-compile '/style/*/' do
-  filter :sass, Compass.sass_engine_options
-end
-
-compile '/stylesheets/partials/*/' do
-  # don’t compile partials
-end
+#compile '/sass/*/' do
+#  filter :sass, Compass.sass_engine_options
+#end
 
 compile '*' do
-  filter :erb
+  filter :haml
   layout 'default'
 end
 
 ### Routing rules
+#route '/sass/_*/' do
+#   nil
+#end
 
-route '/style/_*/' do
-  # don't output partials, so return nil
-  nil
-end
-
-route '/style/*/' do
-  # don't generate a directory like we do for HTML files
-  item.identifier.chop + '.css'
-end
+#route '/sass/*/' do
+#    item.identifier.gsub(/sass/,'css').chop + '.css'
+#end
 
 route '*' do
   item.identifier + 'index.html'
@@ -37,4 +30,4 @@ end
 
 ### Layout rules
 
-layout '*', :erb
+layout '*', :haml, :format => :html5

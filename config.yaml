@@ -1,5 +1,6 @@
 --- 
 output_dir: output
+notify_on_compilation_success: false
 data_sources: 
 - type: filesystem_unified
   items_root: /
