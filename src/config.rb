@@ -6,6 +6,7 @@ css_dir         = "output/css"
 sass_dir        = "src/sass"
 images_dir      = "output/img"
 javascripts_dir = "output/js"
+cache_path		= "tmp/.sass-cache"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
