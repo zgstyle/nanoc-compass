@@ -1,0 +1,54 @@
+@import "variables"
+
+// Mixins
+  -------------------------------------------------------------------------- {{{
+=db
+  display: block
+=di
+  display: inline
+=dib
+  display: inline-block
+  // IE7 quirk
+  *display: inline
+  zoom: 1
+=dn
+  display: none
+=df($size: $default-font-size)
+  font: normal #{$size}/1.3 Verdana, sans
+=fl
+  float: left
+=fr
+  float: right
+=h($H)
+  height: $H
+=lh($LH)
+  line-height: $LH
+=nmp
+  margin: 0
+  padding: 0
+=oh
+  overflow: hidden
+=poa
+  position: absolute
+=pof
+  position: fixed
+=por
+  position: relative
+=pos
+  position: static
+=tac
+  text-align: center
+=tal
+  text-align: left
+=tar
+  text-align: right
+=tdn
+  text-decoration: none
+=tdu
+  text-decoration: underline
+=vam
+  vertical-align: middle
+=vat
+  vertical-align: top
+=w($W)
+  width: $W
